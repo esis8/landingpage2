@@ -40,12 +40,12 @@ header {
     display: flex;
     align-items: center;
     justify-content: space-between;
-    margin: 0 calc(var(--hmain)*.03);
+    margin: 0 calc(var(--hmain)*.05);
     height: calc(var(--hmain)*.1);
 }
 
 header img{
-    height: calc(var(--hmain)*.08);
+    height: calc(var(--hmain)*.04);
 }
 
 header nav {
@@ -60,7 +60,7 @@ header nav {
     background: linear-gradient(253.36deg, #BDE6F7 -18.33%, #C8DED4 100.44%, #C2D9C9 100.44%);
     width: 220px;
     position: absolute;
-    right: calc(var(--hmain)*.12);
+    right: calc(var(--hmain)*.14);
     top: calc(var(--hmain)*.03);
     border-radius: calc(var(--pfoo)*.4);
     transform: translateY(0px);
@@ -102,6 +102,17 @@ header nav {
 header nav i img {
     height: calc(var(--hmain)*.03);
     width: calc(var(--hmain)*.03);
+}
+
+header nav .switch i img {
+    height: calc(var(--hmain)*.04);
+    width: calc(var(--hmain)*.04);
+}
+
+header nav .switch i:first-child img{
+    height: calc(var(--hmain)*.032);
+    width: calc(var(--hmain)*.032);
+    margin: calc(var(--hmain)*.004) calc(var(--hmain)*.004);
 }
 
 main {
@@ -184,9 +195,9 @@ main {
 }
 
 .articleRight img {
-    width: calc(var(--hmain)*.58);
-    height: calc(var(--hmain)*.58);
-    margin: calc(var(--hmain)*.1) 0%;
+    width: calc(var(--hmain)*.5);
+    height: calc(var(--hmain)*.5);
+    margin: calc(var(--hmain)*.157) 0%;
 }
 
 /* --- second scheme --- */
@@ -322,7 +333,7 @@ main {
 
 .background {
     position: relative;
-    z-index: -2;
+    z-index: -1;
 }
 
 .background div {
@@ -365,11 +376,11 @@ main {
     display: flex;
     justify-content: center;
     flex-wrap: wrap;
-    gap: calc(var(--hmain)*.063);
+    gap: calc(var(--hmain)*.06);
 }
 
 .cardSocial {
-    width: calc(var(--hmain)*.35);
+    width: calc(var(--hmain)*.33);
     height: calc(var(--hmain)*.42);
     box-shadow: 0px 0px calc(var(--hmain)*.05) rgba(0, 0, 0, 0.25);
     border-radius: calc(var(--hmain)*.04);
@@ -379,6 +390,7 @@ main {
     flex-direction: column;
     transition: 0.25s;
     padding: 0% 2%;
+    background-color: #ffffff;
 }
 
 .cardSocial img {
@@ -443,7 +455,7 @@ footer article {
 }
 
 .logoFooter img{
-    height: calc(var(--hmain)*.08);
+    height: calc(var(--hmain)*.04);
 
 }
 
@@ -641,12 +653,7 @@ footer .rights{
     .cardSocial p{
         font-size: calc(var(--hmain)*.018);
     }
-
-    .logoFooter img{
-        height: calc(var(--hmain)*.05);
-        width: calc(var(--hmain)*.19);
-    }
-    
+  
     .logoFooter p, .rights p {
         
         font-size: calc(var(--hmain)*.02);
@@ -712,9 +719,24 @@ footer .rights{
 /* 2 */
 
 @media (max-width: 1367px) and (orientation: landscape){
-
+    
+    .social{
+        margin: 5% 5%;
+    }
+    .groupSocial{
+        gap: 30px;
+    }
+    
     .cardSocial{
-        width: calc(var(--hmain)*.37);
+        width: 240px;
+        height: 300px;
+        border-radius: 20px;
+    }
+
+    .cardSocial img {
+        width: 60px;
+        height: 60px;
+        border-radius: 15%;
     }
 
 
@@ -741,8 +763,20 @@ footer .rights{
 
 }
 
-/* 3  */
+/* 3 Tablet Landscape */
 
+@media (max-width: 1200px) and (orientation: landscape){
+
+    .groupSocial{
+        gap: 60px;
+    }
+
+    .social{
+        margin: 5% 20%;
+    }
+}
+
+/* 3  */
 @media (max-width: 1023px) and (orientation: landscape){
 
     .background {
@@ -768,6 +802,40 @@ footer .rights{
         display: inline-block;
     }
 
+    header {
+        margin: 0 calc(var(--hmain)*.1);
+        height: calc(var(--hmain)*.15);
+    }
+
+    header img{
+        height: calc(var(--hmain)*.06);
+    }
+
+    header nav div i{
+       display: flex;
+    }
+
+    header nav i img {
+        height: calc(var(--hmain)*.05);
+        width: calc(var(--hmain)*.05);
+    }
+    
+    header nav .switch i img {
+        height: calc(var(--hmain)*.06);
+        width: calc(var(--hmain)*.06);
+    }
+    
+    header nav .switch i:first-child img{
+        height: calc(var(--hmain)*.052);
+        width: calc(var(--hmain)*.052);
+        margin: calc(var(--hmain)*.004) calc(var(--hmain)*.004);
+    }
+
+    .menu {
+        right: calc(var(--hmain)*.23);
+        top: calc(var(--hmain)*.05);
+    }
+    
     .articleLeft {
         width: 60%;
     }
@@ -775,10 +843,13 @@ footer .rights{
     .articleLeft h2 {
         font-size: calc(var(--tmainS));
         line-height: calc(var(--tmainS)*1.2);
+        padding: 0 0px;
+        padding-bottom: calc(var(--tmainS)*.3);
     }
 
     .articleLeft h1 {
         font-size: calc(var(--pmainS));
+        margin-bottom: calc(var(--pmainS)*.5);
     }
 
     .articleLeft .buttons {
@@ -828,14 +899,25 @@ footer .rights{
         width: calc(var(--hmain)*.62);
         height: calc(var(--hmain)*.75);
     }
+
+    .social{
+        margin: 5% 5%;
+    }
  
     .groupSocial {
         gap: calc(var(--hmain)*.15);
     }
 
-    .cardSocial {
-        width: calc(var(--hmain)*.6);
-        height: calc(var(--hmain)*.75);
+    .cardSocial{
+        width: 220px;
+        height: 240px;
+        border-radius: 20px;
+    }
+
+    .cardSocial img {
+        width: 60px;
+        height: 60px;
+        border-radius: 15%;
     }
 
     .cardSocial h3{
@@ -848,10 +930,6 @@ footer .rights{
         font-size: calc(var(--pscard));
     }
 
-    .cardSocial img {
-        width: calc(var(--hmain)*.15);
-        height: calc(var(--hmain)*.15);
-    }
 
     footer {
         flex-direction: column;
@@ -873,7 +951,10 @@ footer .rights{
         
         justify-content: center;
         align-items: center;
-    
+    }
+
+    .logoFooter img {
+        height: calc(var(--hmain)*.1); 
     }
 
     .logoFooter p {
@@ -943,9 +1024,13 @@ footer .rights{
     header {
         margin: 0 calc(var(--hmain)*.03);
     }
-
+ 
     .hidden {
         display: none;
+    }
+
+    .menu {
+        right: calc(var(--hmain)*.12);
     }
 
     .articleLeft {
@@ -1016,6 +1101,7 @@ footer .rights{
         box-shadow: 0px 0px calc(var(--hmain)*.025) rgba(0, 0, 0, 0.25);
     }
 
+
     .cardSocial h3{
         font-size: calc(var(--titleCardS));
         margin: 60px 0;
@@ -1023,6 +1109,11 @@ footer .rights{
 
     .cardSocial p{
         font-size: calc(var(--pscard));
+    }
+
+    .cardSocial img {
+        width: calc(var(--hmain)*.1);
+        height: calc(var(--hmain)*.1);
     }
 
     .cardClient {
@@ -1051,6 +1142,10 @@ footer .rights{
         
         justify-content: center;
         align-items: center;
+    }
+
+    .logoFooter img {
+        height: calc(var(--hmain)*.03); 
     }
 
     .logoFooter p{
@@ -1146,6 +1241,10 @@ footer .rights{
 
     .cardSocial h3{
         margin: 40px 0;
+    }
+
+    .logoFooter img {
+        height: calc(var(--hmain)*.04); 
     }
 
 }
